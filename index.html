@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4thSemesterTimeTable</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  
+  <link rel="icon" href="data:image/png;base64,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" type="image/icon type">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 70px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+      .fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+  </style>
+</head>
+<body>
+    <br>
+    <center>
+        <B><u>TIME TABLE FOR CSE [OS-G2,WT-G1,DBMS-G2,PDC-G2,OS(LAB)-G2,WT(LAB)-G1,DBMS(LAB)-G2]</u></B>
+    </center>
+    <br>
+    <table class="table table-striped table-dark">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col"><span style="color:#2ddbfa;"><b>Monday</b></span></th>
+            <th scope="col"><span style="color:#2ddbfa;"><b>Tuesday</b></span></th>
+            <th scope="col"><span style="color:#2ddbfa;"><b>Wednesday</b></span></th>
+            <th scope="col"><span style="color:#2ddbfa;"><b>Thursday</b></span></th>
+            <th scope="col"><span style="color:#2ddbfa;"><b>Friday</b></span></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">8am-9am</th>
+            <td><B style="color: #ff1900;">AFL</B></td>
+            <td><B style="color: greenyellow;">CHILL!</B></td>
+            <td><B style="color: greenyellow;">CHILL!</B></td>
+            <td><B style="color: greenyellow;">CHILL!</B></td>
+            <td><B style="color: #ff1900;">PDC</B></td>
+          </tr>
+          <tr>
+            <th scope="row">9am-10am</th>
+            <td><B style="color: #ff1900;">DBMS</B></td>
+            <td><B style="color: greenyellow;">CHILL!</B></td>
+            <td><B style="color: greenyellow;">CHILL!</B></td>
+            <td><B style="color: greenyellow;">CHILL!</B></td>
+            <td><B style="color: greenyellow;">CHILL!</B></td>
+          </tr>
+          <tr>
+            <th scope="row">10am-11am</th>
+            <td><B style="color: #ff1900;">PDC</B></td>
+            <td><B style="color: greenyellow;">CHILL!</B></td>
+            <td><B style="color: #ff1900;">WT</B></td>
+            <td><B style="color: greenyellow;">CHILL!</B></td>
+            <td><B style="color: #ff1900;">WT</B></td>
+            
+          </tr>
+          <tr>
+            <th scope="row">11am-12pm</th>
+            <td><B style="color: greenyellow;">CHILL!</B></td>
+            <td><B style="color: greenyellow;">CHILL!</B></td>
+            <td><B style="color: #ff1900;">COA</B></td>
+            <td><B style="color: #ff1900;">DBMS</B></td>
+            <td><B style="color: #ff1900;">COA</B></td>
+          </tr>
+          <tr>
+            <th scope="row">12pm-1pm</th>
+            <td><B style="color: greenyellow;">CHILL!</B></td>
+            <td><B style="color: #ff1900;">AFL</B></td>
+            <td><B style="color: #ff1900;">DBMS</B></td>
+            <td><B style="color: #faaf2d">DBMS LAB</B></td>
+            <td><B style="color: #ff1900;">OS</B></td>
+          </tr>
+          <tr>
+            <th scope="row">1pm-2pm</th>
+            <td><B style="color: greenyellow;">CHILL!</B></td>
+            <td><B style="color: greenyellow;">CHILL!</B></td>
+           <td><B style="color: #ff1900;">AFL</B></td>
+           <td><B style="color: #faaf2d">DBMS LAB</B></td>
+           <td><B style="color: greenyellow;">CHILL!</B></td>
+          </tr>
+          <tr>
+            <th scope="row">2pm-3pm</th>
+            <td><B style="color: greenyellow;">CHILL!</B></td>
+            <td><B style="color: #ff1900;">PDC</B></td>
+            <td><B style="color: greenyellow;">CHILL!</B></td>
+            <td><B style="color: greenyellow;">CHILL!</B></td>
+            <td><B style="color: greenyellow;">CHILL!</B></td>
+          </tr>
+          <tr>
+            <th scope="row">3pm-4pm</th>
+            <td><B style="color: #ff1900;">COA</B></td>
+            <td><B style="color: #ff1900;">WT</B></td>
+            <td><B style="color: #ff1900;">OS</B></td>
+            <td><B style="color: #ff1900;">COA</B></td>
+            <td><B style="color: greenyellow;">CHILL!</B></td>
+          </tr>
+          <tr>
+            <th scope="row">4pm-5pm</th>
+            <td><B style="color: greenyellow;">CHILL!</B></td>
+            <td><B style="color: #faaf2d;">WT LAB</B></td>
+            <td><B style="color:#faaf2d;">OS LAB</B></td>
+            <td><B style="color: #ff1900;">PDC</B></td>
+            <td><B style="color: greenyellow;">CHILL!</B></td>
+          </tr>
+          <tr>
+            <th scope="row">5pm-6pm</th>
+            <td><B style="color: #ff1900;">BCOM</B></td>
+            <td><B style="color: #faaf2d;">WT LAB</B></td>
+            <td><B style="color:#faaf2d;">OS LAB</B></td>
+            <td><B style="color: greenyellow;">CHILL!</B></td>
+            <td><B style="color: greenyellow;">CHILL!</B></td>
+          </tr>
+          <tr>
+            <th scope="row">6pm-7pm</th>
+            <td><B style="color: #ff1900;">BCOM</B></td>
+            <td><B style="color: #ff1900;">OS</B></td>
+            <td><B style="color: greenyellow;">CHILL!</B></td>
+            <td><B style="color: #ff1900;">AFL</B></td>
+            <td><B style="color: #ff1900;">DBMS</B></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="container-fluid pb-0 mb-0 justify-content-center text-light ">
+        <footer>
+            <div class="row my-5 justify-content-center py-5">
+                
+                    <div class="row ">
+
+                        <center>
+                            <center>
+                                <a href="https://www.linkedin.com/in/dishan-purkayastha-a2788619b" class="fa fa-linkedin"></a>
+                              </center>
+                        <h4 class="text-muted mb-md-0 mb-5 bold-text "><b>&copy; Developed By Dishan Purkayastha</b></h4>
+                        </center>
+                    </div>
+              
+        </footer>
+    </div>
+
+</body>
+</html>
